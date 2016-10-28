@@ -1,0 +1,113 @@
+curl http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty | cat query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq .
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq .
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq .
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq '.'
+curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '.'
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq '.'
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq '.'
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json
+curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json
+curl -XGET https://searchengine.backstage.globoi.com/webmedia-globosatplay/video/_search -d @query.json
+curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json
+curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
+curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
+curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
+curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
+..
+..
+grep -Ri change_profile . --color
+grep -Ri chan . --color
+grep -Ri profile . --color
+grep -Ri profile . --color
+git status
+..
+..
+..
+..
+..
+..
+git status
+git diff Gemfile.lock
+git checkout Gemfile.lock
+git status
+git diff app
+touch events.js
+git status
+git add CHANGELOG.md 
+git checkout master
+git branch
+git reset @
+git checkout master
+git status
+git stash
+git checkout master
+git branch
+git pull origin master
+git stash pop
+git diff CHANGELOG.md 
+git add CHANGELOG.md 
+git status
+git diff lib
+git add lib
+git commit -m "Update version and changelog"
+git branch
+git push origin master
+git tag 1.218.0
+git push --tag
+gem push
+git sttus
+git status
+git branch
+git branch -d ajuda
+git branch -D ajuda
+git branch -D temos_de_uso
+git branch -D termos_de_uso
+git branch
+git checkout -b update_external
+git branch
+git status
+rvm use 2.3.1
+rvm gemset use globostat-play
+source ~/.rvm/scripts/rvm 
+rvm use 2.3.1
+bundle install
+git status
+git diff
+git clone https://github.com/ALSchwalm/power-mode.el
+ls power-mode.el/
+git pull origin master
+git branch
+git status
+make test
+git status
+git status
+git add .
+git commit -m "Removing unused files"
+git push origin master
+git log
+exit
+git log
+pwd
+cd /var/www/minesweeper/
+atom .codeclimate.yml 
+git status
+git add .
+git commit -m "Update codeclimate"
+git push origin master
+make test
+..
+..
+make test
+git status
+git add .
+git commit -m "CodeClimate update"
+git push origin master
+git status
