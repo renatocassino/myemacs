@@ -12,6 +12,12 @@
 ;; Find file
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
+;; No tabs
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2) ; or any other preferred value
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
+
 ;; Space between line
 (setq linum-format "%4d \u2502 ")
 
