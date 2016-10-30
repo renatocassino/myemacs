@@ -12,6 +12,9 @@
 ;; Find file
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
+;; Cursor
+(setq-default cursor-type 'bar)
+
 ;; No tabs
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2) ; or any other preferred value
