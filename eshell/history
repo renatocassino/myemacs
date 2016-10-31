@@ -1,7 +1,3 @@
-curl http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty | cat query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq .
 curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
 curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
 curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq
@@ -111,3 +107,22 @@ git add .
 git commit -m "CodeClimate update"
 git push origin master
 git status
+make run
+cat Makefile 
+make build
+make build
+ruby app.rb 
+atom ../../../
+git status
+cd ..
+cd ..
+cd ..
+git status
+git diff
+git status
+git add CHANGELOG.md 
+git diff config/initializers/
+git add config/initializers/
+git status
+wget https://raw.githubusercontent.com/senny/rvm.el/master/rvm.el
+exit
