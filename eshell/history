@@ -1,25 +1,3 @@
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq .
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq .
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search?pretty -d @query.json | jq '.'
-curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '.'
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq '.'
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq '.'
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json
-curl -XGET http://esearch.globoi.com/webmedia-globosatplay/video/_search -d @query.json
-curl -XGET https://searchengine.backstage.globoi.com/webmedia-globosatplay/video/_search -d @query.json
-curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json
-curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
-curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
-curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
-curl -XGET http://searchengine.globoi.com/webmedia-globosatplay/video/_search -d @query.json | jq .
-..
-..
-grep -Ri change_profile . --color
 grep -Ri chan . --color
 grep -Ri profile . --color
 grep -Ri profile . --color
@@ -126,3 +104,25 @@ git add config/initializers/
 git status
 wget https://raw.githubusercontent.com/senny/rvm.el/master/rvm.el
 exit
+cd ..
+composer create-project roots/sage your-theme-name dev-master
+y
+git status
+git checkout deploy.rb 
+git status
+grep -Ri a.p-button .
+grep -Ri "a.p-button" .
+git pull origin master
+git branch
+git fetch -pt 
+git branch -D testd
+git branch -D tests
+git branch log
+git checkout log
+git branch
+git pull origin master
+composer require katzgrau/klogger:dev-master
+bundle install
+rvm gemset list
+rvm gemset use default
+rvm gemset list

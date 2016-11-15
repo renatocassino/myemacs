@@ -69,6 +69,11 @@
 (add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
 
+; JSX and ECMA
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.es6\\'" . jsx-mode))
+(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
+
 ;(load "00common-setup.el")
 ;(load "01ruby.el")
 ;(load "02org.el")
