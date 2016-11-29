@@ -37,7 +37,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(js-indent-level 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,3 +77,20 @@
 ;(load "00common-setup.el")
 ;(load "01ruby.el")
 ;(load "02org.el")
+
+
+(defun my-macro-query (arg)
+        "Prompt for input using minibuffer during kbd macro execution.
+    With prefix argument, allows you to select what prompt string to use.
+    If the input is non-empty, it is inserted at point."
+        (interactive "P")
+        (let* ((query (lambda () (kbd-macro-query t)))
+               (prompt (if arg (read-from-minibuffer "PROMPT: ") "Input: "))
+               (input (unwind-protect
+                          (progn
+                            (add-hook 'minibuffer-setup-hook query)
+                            (read-from-minibuffer prompt))
+                        (remove-hook 'minibuffer-setup-hook query))))
+          (unless (string= "" input) (insert input))))
+(global-set-key "\C-xQ" 'my-macro-query)
+
