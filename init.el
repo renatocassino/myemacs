@@ -79,7 +79,7 @@
 ;(load "02org.el")
 
 
-(defun my-macro-query (arg)
+(defun prompt-macro-query (arg)
         "Prompt for input using minibuffer during kbd macro execution.
     With prefix argument, allows you to select what prompt string to use.
     If the input is non-empty, it is inserted at point."
@@ -92,5 +92,18 @@
                             (read-from-minibuffer prompt))
                         (remove-hook 'minibuffer-setup-hook query))))
           (unless (string= "" input) (insert input))))
-(global-set-key "\C-xQ" 'my-macro-query)
+(global-set-key "\C-xQ" 'prompt-macro-query)
 
+; Macros
+; C-x ( # Begin
+; C-x ) # End
+; C-x C-k n # Save name
+; C-u <n> C-x e # Run many times
+; C-x C-k SPC # Control macro
+; C-x C-k e # Edit current macro
+; C-x C-k b # Set macro command
+; C-x C-k <0..9> # Set command to number
+; M-x insert-kbd-macro # Convert named macro to LISP command
+
+(fset 'changelog-add
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("<## Q (Q) - Q" 0 "%d")) arg)))
