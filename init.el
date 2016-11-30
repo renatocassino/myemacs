@@ -37,7 +37,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(js-indent-level 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,3 +77,33 @@
 ;(load "00common-setup.el")
 ;(load "01ruby.el")
 ;(load "02org.el")
+
+
+(defun prompt-macro-query (arg)
+        "Prompt for input using minibuffer during kbd macro execution.
+    With prefix argument, allows you to select what prompt string to use.
+    If the input is non-empty, it is inserted at point."
+        (interactive "P")
+        (let* ((query (lambda () (kbd-macro-query t)))
+               (prompt (if arg (read-from-minibuffer "PROMPT: ") "Input: "))
+               (input (unwind-protect
+                          (progn
+                            (add-hook 'minibuffer-setup-hook query)
+                            (read-from-minibuffer prompt))
+                        (remove-hook 'minibuffer-setup-hook query))))
+          (unless (string= "" input) (insert input))))
+(global-set-key "\C-xQ" 'prompt-macro-query)
+
+; Macros
+; C-x ( # Begin
+; C-x ) # End
+; C-x C-k n # Save name
+; C-u <n> C-x e # Run many times
+; C-x C-k SPC # Control macro
+; C-x C-k e # Edit current macro
+; C-x C-k b # Set macro command
+; C-x C-k <0..9> # Set command to number
+; M-x insert-kbd-macro # Convert named macro to LISP command
+
+(fset 'changelog-add
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("<## Q (Q) - Q" 0 "%d")) arg)))

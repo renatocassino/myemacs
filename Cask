@@ -5,6 +5,7 @@
 (depends-on "auto-complete")
 (depends-on "elixir-mode")
 (depends-on "jsx-mode")
+(depends-on "markdown-mode")
 (depends-on "pallet")
 (depends-on "php-mode")
 (depends-on "rjsx-mode")
