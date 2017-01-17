@@ -107,3 +107,6 @@
 
 (fset 'changelog-add
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("<## Q (Q) - Q" 0 "%d")) arg)))
+
+;; SET COMMANDS
+(global-set-key (kbd "C-c t") 'emmet-expand-line)

@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Redis"
+ (filename . "~/globo/globotv/globotv-eventos/Gemfile")
+ (front-context-string . "gem 'redis-rails")
+ (rear-context-string . ", '0.10.0.rc5'\n\n")
+ (position . 483))
+)

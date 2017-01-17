@@ -1,118 +1,3 @@
-grep -Ri chan . --color
-grep -Ri profile . --color
-grep -Ri profile . --color
-git status
-..
-..
-..
-..
-..
-..
-git status
-git diff Gemfile.lock
-git checkout Gemfile.lock
-git status
-git diff app
-touch events.js
-git status
-git add CHANGELOG.md 
-git checkout master
-git branch
-git reset @
-git checkout master
-git status
-git stash
-git checkout master
-git branch
-git pull origin master
-git stash pop
-git diff CHANGELOG.md 
-git add CHANGELOG.md 
-git status
-git diff lib
-git add lib
-git commit -m "Update version and changelog"
-git branch
-git push origin master
-git tag 1.218.0
-git push --tag
-gem push
-git sttus
-git status
-git branch
-git branch -d ajuda
-git branch -D ajuda
-git branch -D temos_de_uso
-git branch -D termos_de_uso
-git branch
-git checkout -b update_external
-git branch
-git status
-rvm use 2.3.1
-rvm gemset use globostat-play
-source ~/.rvm/scripts/rvm 
-rvm use 2.3.1
-bundle install
-git status
-git diff
-git clone https://github.com/ALSchwalm/power-mode.el
-ls power-mode.el/
-git pull origin master
-git branch
-git status
-make test
-git status
-git status
-git add .
-git commit -m "Removing unused files"
-git push origin master
-git log
-exit
-git log
-pwd
-cd /var/www/minesweeper/
-atom .codeclimate.yml 
-git status
-git add .
-git commit -m "Update codeclimate"
-git push origin master
-make test
-..
-..
-make test
-git status
-git add .
-git commit -m "CodeClimate update"
-git push origin master
-git status
-make run
-cat Makefile 
-make build
-make build
-ruby app.rb 
-atom ../../../
-git status
-cd ..
-cd ..
-cd ..
-git status
-git diff
-git status
-git add CHANGELOG.md 
-git diff config/initializers/
-git add config/initializers/
-git status
-wget https://raw.githubusercontent.com/senny/rvm.el/master/rvm.el
-exit
-cd ..
-composer create-project roots/sage your-theme-name dev-master
-y
-git status
-git checkout deploy.rb 
-git status
-grep -Ri a.p-button .
-grep -Ri "a.p-button" .
-git pull origin master
 git branch
 git fetch -pt 
 git branch -D testd
@@ -126,3 +11,118 @@ bundle install
 rvm gemset list
 rvm gemset use default
 rvm gemset list
+git status
+git diff
+git status
+php -S localhost:8888
+php thumcno server
+cd ..
+cd ..
+php thumcno server
+composer  install
+php thumcno 
+php thumcno config
+php thumcno server
+php-cli -v
+php -v
+brew install php7.0
+brew install php70
+brew unlink php56
+brew install php70
+php -v
+php thumcno server
+php thumcno check
+php thumcno server
+codecept run
+php thumcno server
+git status
+git diff
+php thumcno server
+wget https://s.videos.globo.com/p3/bundles/player-lite/player-lite.min.js
+ls
+ls
+ls
+ls
+ls
+wget https://s.videos.globo.com/p3/bundles/player-lite/player-lite.min.js
+ls
+ls
+git branch
+git pull origin master
+git fetch -pt
+git tag
+git branch
+git pull origin master
+tig
+git blame
+git pull origin master
+git fetch -pt
+git tag
+git branch
+git branch
+git checkout api_eventos origin/api_eventos
+git checkout -b api_eventos origin/api_eventos
+git checkout -b api_eventos
+git branch
+git pull origin api_eventos
+git checkout -b api-eventos
+git branch
+git branch -D api_eventos
+git branch
+git pull origin api-eventos
+git pull origin api-eventos
+git log
+git pull origin master
+git branch
+git fetch -tp
+git branch
+git checkout -b cma
+git branch
+git branch
+git pull origin master
+paver test
+ls
+make test
+cd ..
+cd ..
+sed -f holdscript holdtext 
+cat holdtext 
+cat holdtext 
+clear
+cls
+clear
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+git push origin master
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+sed -f holdscript holdtext 
+ls
+git grep 1.15
+git status
+ls
+ls .gitmodules
+ls .git
+exit
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+git grep 175fab
+git grep -i 175fab
+git grep conheca
+git status
+exit
