@@ -110,3 +110,6 @@
 
 ;; SET COMMANDS
 (global-set-key (kbd "C-c t") 'emmet-expand-line)
+
+;; Remote automatic # coding utf-8 for ruby-mode
+(setq ruby-insert-encoding-magic-comment nil)
