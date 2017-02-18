@@ -114,7 +114,31 @@
 ;; Remote automatic # coding utf-8 for ruby-mode
 (setq ruby-insert-encoding-magic-comment nil)
 
+(defun copy-from-ubuntu (text &optional push)
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+    )
 
+(defun paste-to-ubuntu ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
 
 ;;;;; Clipboard Mac OS X
 (defun copy-from-osx ()
@@ -132,5 +156,6 @@
     (setq interprogram-paste-function 'copy-from-osx))
   (progn
     ;;;;; Clipboard UBUNTU
-    (setq x-select-enable-clipboard t)
-    (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)))
+    (setq interprogram-cut-function 'copy-from-ubuntu)
+    (setq interprogram-paste-function 'paste-to-ubuntu)))
+
