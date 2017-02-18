@@ -114,6 +114,7 @@
 ;; Remote automatic # coding utf-8 for ruby-mode
 (setq ruby-insert-encoding-magic-comment nil)
 
+;;;; Clipboard for ubuntu
 (defun copy-from-ubuntu (text &optional push)
   (interactive)
   (if (display-graphic-p)
