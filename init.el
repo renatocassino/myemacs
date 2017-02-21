@@ -13,6 +13,17 @@
 
 ;; Find file
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
+;;;;; Ignore files
+(setq fiplr-ignored-globs
+      '((directories
+         ;; Version control
+         (".git", "node_modules", "__pycache__"))
+        (files
+         ;; Emacs
+         (".#*", "*~", "*.so", "*.o", "*.obj", "*.jpg", "*.png", "*.gif", "*.pdf"
+          ;; Archives
+          "*.gz"
+          "*.zip"))))
 
 ;; Cursor
 (setq-default cursor-type 'bar)
