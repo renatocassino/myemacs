@@ -15,6 +15,7 @@
 (depends-on "ripgrep")
 (depends-on "rjsx-mode")
 (depends-on "robe")
+(depends-on "roguel-ike")
 (depends-on "rubocop")
 (depends-on "rust-mode")
 (depends-on "scss-mode")

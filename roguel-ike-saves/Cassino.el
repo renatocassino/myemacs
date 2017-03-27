@@ -1,0 +1,1 @@
+("Cassino" :human (:spirit (9 . 9) :speed (23 . 78) :constitution (8 . 13) :strength (9 . 10) :stamina (14 . 0) :health (13 . 1)))

@@ -17,10 +17,20 @@
 (setq fiplr-ignored-globs
       '((directories
          ;; Version control
-         (".git", "node_modules", "__pycache__"))
+         (".git"
+          "node_modules"
+          "__pycache__"))
         (files
          ;; Emacs
-         (".#*", "*~", "*.so", "*.o", "*.obj", "*.jpg", "*.png", "*.gif", "*.pdf"
+         (".#*"
+          "*~"
+          "*.so"
+          "*.o"
+          "*.obj"
+          "*.jpg"
+          "*.png"
+          "*.gif"
+          "*.pdf"
           ;; Archives
           "*.gz"
           "*.zip"))))
