@@ -10,7 +10,10 @@
 (global-set-key (kbd "C-x q") 'neotree-toggle)
 
 (global-linum-mode t)
-(load-theme 'tango-dark)
+(if (equal (shell-command-to-string "uname") "Darwin\n")
+  (load-theme 'tango-dark)
+  (load-theme 'tsdh-dark)
+)
 
 ;; Find file
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
@@ -170,33 +173,6 @@
 ;; Remote automatic # coding utf-8 for ruby-mode
 (setq ruby-insert-encoding-magic-comment nil)
 
-;;;; Clipboard for ubuntu
-(defun copy-from-ubuntu (text &optional push)
-  (interactive)
-  (if (display-graphic-p)
-      (progn
-        (message "Yanked region to x-clipboard!")
-        (call-interactively 'clipboard-kill-ring-save)
-        )
-    (if (region-active-p)
-        (progn
-          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
-          (message "Yanked region to clipboard!")
-          (deactivate-mark))
-      (message "No region active; can't yank to clipboard!")))
-    )
-
-(defun paste-to-ubuntu ()
-  (interactive)
-  (if (display-graphic-p)
-      (progn
-        (clipboard-yank)
-        (message "graphics active")
-        )
-    (insert (shell-command-to-string "xsel -o -b"))
-    )
-  )
-
 ;;;;; Clipboard Mac OS X
 (defun copy-from-osx ()
   (shell-command-to-string "pbpaste"))
@@ -206,13 +182,47 @@
       (process-send-string proc text)
       (process-send-eof proc))))
 
-(if (equal (shell-command-to-string "uname") "Darwin\n")
-  (progn
-    ;;;;; Clipboard Mac OS X
-    (setq interprogram-cut-function 'paste-to-osx)
-    (setq interprogram-paste-function 'copy-from-osx))
-  (progn
-    ;;;;; Clipboard UBUNTU
-    (setq interprogram-cut-function 'copy-from-ubuntu)
-    (setq interprogram-paste-function 'paste-to-ubuntu)))
+;;;;; Ubuntu clipboard
+(setq *is-a-mac* (eq system-type 'darwin))
+(setq *cygwin* (eq system-type 'cygwin) )
+(setq *linux* (or (eq system-type 'gnu/linux) (eq system-type 'linux)) )
+(defun copy-to-x-clipboard-all-os (text &optional push)
+  (interactive)
+  (if (region-active-p)
+      (progn
+        (cond
+         ((and (display-graphic-p) x-select-enable-clipboard)
+          (x-set-selection 'CLIPBOARD (buffer-substring (region-beginning) (region-end))))
+         (t (shell-command-on-region (region-beginning) (region-end)
+                                     (cond
+                                      (*cygwin* "putclip")
+                                      (*is-a-mac* "pbcopy")
+                                      (*linux* "xsel -ib")))
+            ))
+        (message "Yanked region to clipboard!")
+        (deactivate-mark))
+        (message "No region active; can't yank to clipboard!")))
 
+(defun paste-from-x-clipboard-all-os()
+  (interactive)
+  (cond
+   ((and (display-graphic-p) x-select-enable-clipboard)
+    (insert (x-selection 'CLIPBOARD)))
+   (t (shell-command
+       (cond
+        (*cygwin* "getclip")
+        (*is-a-mac* "pbpaste")
+        (t "xsel -ob"))
+       1))
+   ))
+
+   ;;;;;;;;;;; Check if mac os and ubuntu
+   (if (equal (shell-command-to-string "uname") "Darwin\n")
+     (progn
+       ;;;;; Clipboard Mac OS X
+       (setq interprogram-cut-function 'paste-to-osx)
+       (setq interprogram-paste-function 'copy-from-osx))
+     (progn
+       ;;;;; Clipboard UBUNTU
+       (setq interprogram-cut-function 'copy-to-x-clipboard-all-os)
+       (setq interprogram-paste-function 'paste-from-x-clipboard-all-os)))
