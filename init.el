@@ -243,5 +243,5 @@
 
 ;;;;;; C-n to next buffer (equals C-<right>)
 (global-set-key (kbd "C-x C-n") 'next-buffer)
-(global-set-key (kbd "C-x C-b") 'previous-buffer)
+(global-set-key (kbd "C-x C-m") 'previous-buffer) ;; Change b to m because i use tmux :/
 
