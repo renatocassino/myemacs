@@ -109,6 +109,8 @@
 ;; For ruby env
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . html-mode))
+
 
 ;; RVM
 (require 'rvm)
@@ -226,3 +228,20 @@
        ;;;;; Clipboard UBUNTU
        (setq interprogram-cut-function 'copy-to-x-clipboard-all-os)
        (setq interprogram-paste-function 'paste-from-x-clipboard-all-os)))
+
+;;;;;;;;;;;; MAC
+(if (equal (shell-command-to-string "uname") "Darwin\n")
+  (progn
+    ;;;;; Clipboard Mac OS X
+    (setq interprogram-cut-function 'paste-to-osx)
+    (setq interprogram-paste-function 'copy-from-osx))
+  (progn
+    ;;;;; Clipboard UBUNTU
+    (setq interprogram-cut-function 'copy-from-ubuntu)
+    (setq interprogram-paste-function 'paste-to-ubuntu)))
+
+
+;;;;;; C-n to next buffer (equals C-<right>)
+(global-set-key (kbd "C-x C-n") 'next-buffer)
+(global-set-key (kbd "C-x C-b") 'previous-buffer)
+
