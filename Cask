@@ -22,4 +22,5 @@
 (depends-on "rubocop")
 (depends-on "rust-mode")
 (depends-on "scss-mode")
+(depends-on "typescript-mode")
 (depends-on "yaml-mode")
