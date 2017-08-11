@@ -8,6 +8,7 @@
 (depends-on "elixir-mode")
 (depends-on "emmet-mode")
 (depends-on "go-mode")
+(depends-on "js2-mode")
 (depends-on "jsx-mode")
 (depends-on "magit")
 (depends-on "markdown-mode")

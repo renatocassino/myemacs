@@ -245,3 +245,8 @@
 (global-set-key (kbd "C-x C-n") 'next-buffer)
 (global-set-key (kbd "C-x C-m") 'previous-buffer) ;; Change b to m because i use tmux :/
 
+;;;;;;;;;;;;;;;; CHANGE INDENT SIZE
+ (setq css-indent-offset 2)
+
+;;;; JSX
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
