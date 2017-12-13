@@ -249,7 +249,7 @@
 (global-set-key (kbd "C-x C-m") 'previous-buffer) ;; Change b to m because i use tmux :/
 
 ;;;;;;;;;;;;;;;; CHANGE INDENT SIZE
- (setq css-indent-offset 2)
+(setq css-indent-offset 2)
 
 ;;;; JSX
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
@@ -257,13 +257,17 @@
 ;; ---------------------------------------
 ;; load elscreen
 ;; ---------------------------------------
+(require 'elscreen)
 (load "elscreen" "ElScreen" t)
+(elscreen-start)
 
 ;; F9 creates a new elscreen, shift-F9 kills it
-(global-set-key (kbd "C-x t n") 'elscreen-create)
+(global-set-key (kbd "C-x t c") 'elscreen-create)
 (global-set-key (kbd "C-x t k") 'elscreen-kill)
 
 ;; Windowskey+PgUP/PgDown switches between elscreens
-(global-set-key (kbd "C-M-_") 'elscreen-previous)
-(global-set-key (kbd "C-M-+") 'elscreen-next)
+(global-set-key (kbd "C-x t n") 'elscreen-previous)
+(global-set-key (kbd "C-x t p") 'elscreen-next)
+(global-set-key (kbd "C-M-[") 'elscreen-previous)
+(global-set-key (kbd "C-M-]") 'elscreen-next)
 
