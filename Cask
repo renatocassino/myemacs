@@ -6,6 +6,7 @@
 (depends-on "auto-complete")
 (depends-on "bash-completion")
 (depends-on "elixir-mode")
+(depends-on "elscreen")
 (depends-on "emmet-mode")
 (depends-on "go-mode")
 (depends-on "js2-mode")
