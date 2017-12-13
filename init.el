@@ -74,6 +74,9 @@
  '(nrepl-message-colors
    (quote
     ("#183691" "#969896" "#a71d5d" "#969896" "#0086b3" "#795da3" "#a71d5d" "#969896")))
+ '(package-selected-packages
+   (quote
+    (elixir-mode typescript-mode yaml-mode ripgrep php-mode markdown-mode jsx-mode auto-complete)))
  '(pdf-view-midnight-colors (quote ("#969896" . "#f8eec7")))
  '(vc-annotate-background "#b0cde7")
  '(vc-annotate-color-map
