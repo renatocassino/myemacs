@@ -13,6 +13,7 @@
 (depends-on "jsx-mode")
 (depends-on "magit")
 (depends-on "markdown-mode")
+(depends-on "multiple-cursors")
 (depends-on "pacmacs")
 (depends-on "pallet")
 (depends-on "php-mode")

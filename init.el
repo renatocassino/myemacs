@@ -1,3 +1,6 @@
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
 ;;;(setq make-backup-files nil)
 
 (add-to-list 'load-path "~/.emacs.d/themes/")
@@ -76,7 +79,7 @@
     ("#183691" "#969896" "#a71d5d" "#969896" "#0086b3" "#795da3" "#a71d5d" "#969896")))
  '(package-selected-packages
    (quote
-    (elixir-mode typescript-mode yaml-mode ripgrep php-mode markdown-mode jsx-mode auto-complete)))
+    (rjsx-mode multiple-cursors elixir-mode typescript-mode yaml-mode ripgrep php-mode markdown-mode jsx-mode auto-complete)))
  '(pdf-view-midnight-colors (quote ("#969896" . "#f8eec7")))
  '(vc-annotate-background "#b0cde7")
  '(vc-annotate-color-map
@@ -271,3 +274,10 @@
 (global-set-key (kbd "C-M-[") 'elscreen-previous)
 (global-set-key (kbd "C-M-]") 'elscreen-next)
 
+;;;;; Multiple cursors
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
