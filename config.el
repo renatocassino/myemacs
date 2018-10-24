@@ -37,6 +37,11 @@
           "*.zip"))))
 
 ;; Cask - package manager
+(if (equal (shell-command-to-string "uname") "Darwin\n")
+  (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+  (require 'cask "~/.cask/cask.el")
+)
+(cask-initialize)
 (require 'pallet) ;; Package manager
 (pallet-mode t)
 
