@@ -35,3 +35,8 @@
           "*.pdf"
           "*.gz"
           "*.zip"))))
+
+;; Cask - package manager
+(require 'pallet) ;; Package manager
+(pallet-mode t)
+
