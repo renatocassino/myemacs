@@ -15,7 +15,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (dracula-theme grizzl s shut-up pallet fiplr))))
+ '(package-selected-packages
+   (quote
+    (json-mode exec-path-from-shell web-mode js2-mode eslint-fix flycheck zenburn-theme dracula-theme grizzl s shut-up pallet fiplr))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -23,5 +25,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-(load-file "./config.el")
+(load-file "~/.emacs.d/config.el")
 
