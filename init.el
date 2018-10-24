@@ -1,12 +1,4 @@
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+(package-initialize) ;; Cannot remove
 
 ;; MELPA
 ;; load emacs 24's package system. Add MELPA repository.
@@ -14,14 +6,22 @@
   (require 'package)
   (add-to-list
    'package-archives
-   ;; '("melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
-   '("melpa" . "http://melpa.milkbox.net/packages/")
-   t))
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
 
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.org/packages/"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (fiplr))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
-;;; NEOTREE
-(add-to-list 'load-path "./plugins/neotree")
-(require 'neotree)
-(global-set-key (kbd "C-x q") 'neotree-toggle)
+(load-file "./config.el")
+
