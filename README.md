@@ -11,3 +11,8 @@ $ ln -s /usr/local/share/emacs/site-lisp/cask/cask.el ~/.cask # Only in mac
 
 Clone this project in `~/.emacs.d`.
 
+## Plugins
+
+```bash
+$ git submodule add git@github.com:jaypei/emacs-neotree.git plugins/neotree
+```
