@@ -17,7 +17,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (json-mode exec-path-from-shell web-mode js2-mode eslint-fix flycheck zenburn-theme dracula-theme grizzl s shut-up pallet fiplr))))
+    (flycheck-flow flymake-jslint flymake-go flymake-css flycheck-jest flycheck-golangci-lint go-mode json-mode exec-path-from-shell web-mode js2-mode eslint-fix flycheck zenburn-theme dracula-theme grizzl s shut-up pallet fiplr))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
